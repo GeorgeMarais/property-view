@@ -11,23 +11,28 @@ interface DropdownItem {
 
 const Header: React.FC<HeaderProps> = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const aboutDropdownItems: DropdownItem[] = [
-    { label: "About OpenRent", href: "#" },
-    { label: "Our Story", href: "#" },
-    { label: "Contact Us", href: "#" },
-    { label: "Careers", href: "#" }
+    { label: 'About OpenRent', href: '#' },
+    { label: 'Our Story', href: '#' },
+    { label: 'Contact Us', href: '#' },
+    { label: 'Careers', href: '#' },
   ];
 
   const pricingDropdownItems: DropdownItem[] = [
-    { label: "Tenant Fees", href: "#" },
-    { label: "Landlord Packages", href: "#" },
-    { label: "Additional Services", href: "#" },
-    { label: "Special Offers", href: "#" }
+    { label: 'Tenant Fees', href: '#' },
+    { label: 'Landlord Packages', href: '#' },
+    { label: 'Additional Services', href: '#' },
+    { label: 'Special Offers', href: '#' },
   ];
 
   const handleDropdownClick = (dropdownName: string) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -93,7 +98,11 @@ const Header: React.FC<HeaderProps> = () => {
         </g>
       </svg>
 
-      <nav className="flex flex-wrap gap-8 items-center self-start max-md:max-w-full">
+      <button className="lg:hidden" onClick={toggleMenu}>
+        <i className={isMenuOpen ? 'fa fa-times' : 'fa fa-bars'} />
+      </button>
+
+      <nav className={`flex flex-wrap gap-8 items-center self-start max-md:max-w-full ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="relative">
           <button
             onClick={() => handleDropdownClick('about')}
