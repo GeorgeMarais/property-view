@@ -72,11 +72,11 @@ const PropertyView: React.FC = () => {
           landlord={landlordDetails}
         />
         <br />
-        <div className="flex flex-col px-4 py-6 mt-0 ml-6 max-w-full bg-white rounded-md border border-solid border-neutral-400 min-h-[856px] w-[742px] max-md:mt-0">
+        <div className="flex flex-col px-4 py-6 mt-0 ml-6 max-w-full bg-white rounded-md border border-solid border-neutral-400 min-h-[856px] max-sm:mx-4">
           <div className="text-2xl text-black font-[350]">Price & Bills</div>
           <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
 
-          <div className="flex flex-col mt-5 w-full max-w-[724px] max-md:max-w-full">
+          <div className="flex flex-col mt-5 w-full sm:max-w-full">
             <GridRow label="Deposit" value="£1,625" evenRow />
             <GridRow label="Bills Included" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} />
             <GridRow label="Broadband" value={<a href="#" style={{ color: "#498EC9" }}>View Offers</a>} evenRow />
@@ -86,7 +86,7 @@ const PropertyView: React.FC = () => {
             Tenant Preferences
           </div>
           <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full max-w-[724px] max-md:max-w-full">
+          <div className="flex flex-col mt-5 w-full sm:max-w-full">
             <GridRow label="Student Friendly" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
             <GridRow label="Families Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} />
             <GridRow label="Pets Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} evenRow />
@@ -98,7 +98,7 @@ const PropertyView: React.FC = () => {
             Availability
           </div>
           <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full max-w-[724px] max-md:max-w-full">
+          <div className="flex flex-col mt-5 w-full sm:max-w-full">
             <GridRow label="Available From" value="26 January 2024" evenRow />
             <GridRow label="Minimum Tenancy" value="3 Months" />
             <GridRow label="Online Viewings" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
@@ -108,7 +108,7 @@ const PropertyView: React.FC = () => {
             Features
           </div>
           <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full max-w-[724px] max-md:max-w-full">
+          <div className="flex flex-col mt-5 w-full sm:max-w-full">
             <GridRow label="Garden" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
             <GridRow label="Parking" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} />
             <GridRow label="Fireplace" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} evenRow />
@@ -117,7 +117,8 @@ const PropertyView: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center px-5 py-4 mt-8 ml-6 max-w-full text-base font-semibold text-black bg-white rounded-md border border-solid border-neutral-400 min-h-[434px] w-[742px]">
+
+        <div className="flex flex-col items-center px-5 py-4 mt-8 mx-6 sm:mx-6 max-w-full text-base font-semibold text-black bg-white rounded-md border border-solid border-neutral-400 min-h-[434px] sm:w-full">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/a61c00a205185824e1aa89aaeef73f1a6008432edd552a06744250835b1efe03?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3"
@@ -127,6 +128,7 @@ const PropertyView: React.FC = () => {
           <br />
           <TransportGrid />
         </div>
+
         <button className="gap-2.5 self-center px-8 py-3 mt-14 text-xl font-bold text-white rounded-md max-md:px-5 max-md:mt-10" style={{ backgroundColor: "#498EC9" }} onClick={scrollToTop}>
           Back to top
         </button>

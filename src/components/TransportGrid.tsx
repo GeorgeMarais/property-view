@@ -14,24 +14,26 @@ const TransportGrid = () => {
                 <>
                     <GridRow label={<span className="font-semibold">Station</span>} value={<span className="font-semibold">Time From Property</span>} />
                     <GridRow label={<>
-                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" style={{ width: "24px", position: "absolute", float: "left" }} alt="National Rail"></img>
-                        <span className="font-normal" style={{ marginLeft: "2rem" }}>Clapham Junction</span>
+                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" className="w-[24px] sm:float-left sm:mr-3" alt="National Rail" />
+                        <span className="font-normal sm:ml-[2rem]">Clapham Junction</span>
                     </>} value={<span className="font-normal">10 minute walk</span>} evenRow />
                     <GridRow label={<>
-                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" style={{ width: "24px", position: "absolute", float: "left" }} alt="National Rail"></img>
-                        <span className="font-normal" style={{ marginLeft: "2rem" }}>Wandsworth Town</span>
+                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" className="w-[24px] sm:float-left sm:mr-3" alt="National Rail" />
+                        <span className="font-normal sm:ml-[2rem]">Wandsworth Town</span>
                     </>} value={<span className="font-normal">24 minute walk</span>} />
                     <GridRow label={<>
-                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" style={{ width: "24px", position: "absolute", float: "left" }} alt="National Rail"></img>
-                        <span className="font-normal" style={{ marginLeft: "2rem" }}>Battersea Park</span>
+                        <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" className="w-[24px] sm:float-left sm:mr-3" alt="National Rail" />
+                        <span className="font-normal sm:ml-[2rem]">Battersea Park</span>
                     </>} value={<span className="font-normal">27 minute walk</span>} evenRow />
+
                 </>
             )}
 
             <div className="flex gap-3 items-center py-1 mt-4 cursor-pointer" onClick={toggleExpand}>
-                <div className="self-stretch my-auto">{isExpanded ? "Hide local transport" : "Show local transport"}</div>
-                <i className={`fa ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"} object-contain shrink-0 self-stretch my-auto aspect-[1.3] w-[13px]`}></i>
+                <div className="self-stretch my-auto text-center sm:text-left">{isExpanded ? "Hide local transport" : "Show local transport"}</div>
+                <i className={`fa ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"} object-contain shrink-0 self-stretch my-auto aspect-[1.3] w-[13px] sm:w-[16px] sm:mr-2`}></i>
             </div>
+
         </>
     );
 };
