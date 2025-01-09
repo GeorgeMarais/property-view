@@ -22,7 +22,6 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({
-  sections,
   images,
   title,
   reference,

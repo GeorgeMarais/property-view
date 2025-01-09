@@ -9,7 +9,7 @@ interface DropdownItem {
   href: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ sections }) => {
+const Header: React.FC<HeaderProps> = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const aboutDropdownItems: DropdownItem[] = [
