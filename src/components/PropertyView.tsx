@@ -5,6 +5,7 @@ import MainContent from "./MainContent";
 import Footer from "./Footer";
 import TransportGrid from "./TransportGrid";
 import GridRow from "./GridRow";
+import image from "../images/main.jpg"
 
 const PropertyView: React.FC = () => {
   const headerSections = [
@@ -22,7 +23,7 @@ const PropertyView: React.FC = () => {
 
   const imageGallery = [
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/0ca1fb172daae92fb7f6d8e30e1fef158cea24ee5b35fbedf35bc911cc85bd45?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+      src: image.src,
       alt: "Primary Image",
     },
     {
