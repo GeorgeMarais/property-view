@@ -5,7 +5,11 @@ import MainContent from "./MainContent";
 import Footer from "./Footer";
 import TransportGrid from "./TransportGrid";
 import GridRow from "./GridRow";
-import image from "../images/main.jpg"
+import mainImage from "../images/main.jpg"
+import image2 from "../images/image2.jpg"
+import image3 from "../images/image3.jpg"
+import image4 from "../images/image4.jpg"
+import mapImage from "../images/Location Map.png"
 
 const PropertyView: React.FC = () => {
   const headerSections = [
@@ -23,19 +27,19 @@ const PropertyView: React.FC = () => {
 
   const imageGallery = [
     {
-      src: image.src,
+      src: mainImage.src,
       alt: "Primary Image",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/74b70e017b77428dd419555c52111f74ab29dbab5d609f3235b97bc4cbecedf2?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+      src: image2.src,
       alt: "Secondary Image",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/63105166c49b8e4fd81842a1c0942323f38051112b50bf9050b9d3547f72bedb?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+      src: image3.src,
       alt: "Tertiary Image",
     },
     {
-      src: "https://cdn.builder.io/api/v1/image/assets/TEMP/d2c9b851bc2a01fae78ab53e2a8f6586b4d7423509982a9e4a04e2e27449770a?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+      src: image4.src,
       alt: "Quaternary Image",
     },
   ];
@@ -121,7 +125,7 @@ const PropertyView: React.FC = () => {
         <div className="w-full mt-8 bg-white rounded-lg border border-neutral-400 p-6">
           <img
             loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a61c00a205185824e1aa89aaeef73f1a6008432edd552a06744250835b1efe03?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3"
+            src={mapImage.src}
             alt="Local Area Image"
             className="w-full rounded-lg object-cover aspect-[2.02]"
           />
