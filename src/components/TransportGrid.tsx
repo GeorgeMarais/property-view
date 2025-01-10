@@ -25,7 +25,6 @@ const TransportGrid = () => {
                         <img src="//staticcdn.openrent.co.uk/images/Transport/nationalrail_24.png" className="w-[24px] sm:float-left sm:mr-3" alt="National Rail" />
                         <span className="font-normal sm:ml-[2rem]">Battersea Park</span>
                     </>} value={<span className="font-normal">27 minute walk</span>} evenRow />
-
                 </>
             )}
 

@@ -43,8 +43,7 @@ const PropertyView: React.FC = () => {
     name: "John T.",
     responseRate: "100%",
     responseTime: "21 Hours",
-    imgSrc:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/ebbf14df0bdea6199ad67b60ca055568421a2708cfb2d01ff5a188a3796b3f38?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+    imgSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/ebbf14df0bdea6199ad67b60ca055568421a2708cfb2d01ff5a188a3796b3f38?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
   };
 
   const scrollToTop = () => {
@@ -52,11 +51,11 @@ const PropertyView: React.FC = () => {
       top: 0,
       behavior: "smooth",
     });
-  }
+  };
 
   return (
-    <div className="flex overflow-hidden flex-col bg-white">
-      <div className="flex flex-col items-start self-center max-w-full w-[1250px]">
+    <div className="flex overflow-hidden flex-col bg-white min-h-screen">
+      <div className="flex flex-col items-start mx-auto w-full max-w-[1250px] px-4 sm:px-6 lg:px-8">
         <Header sections={headerSections} />
         <SearchBackLink />
         <MainContent
@@ -71,65 +70,69 @@ const PropertyView: React.FC = () => {
           maxTenants={1}
           landlord={landlordDetails}
         />
-        <br />
-        <div className="flex flex-col px-4 py-6 mt-0 ml-6 max-w-full bg-white rounded-md border border-solid border-neutral-400 min-h-[856px] max-sm:mx-4">
-          <div className="text-2xl text-black font-[350]">Price & Bills</div>
-          <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
 
-          <div className="flex flex-col mt-5 w-full sm:max-w-full">
-            <GridRow label="Deposit" value="£1,625" evenRow />
-            <GridRow label="Bills Included" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} />
-            <GridRow label="Broadband" value={<a href="#" style={{ color: "#498EC9" }}>View Offers</a>} evenRow />
-          </div>
+        <div className="w-full mt-8 bg-white rounded-lg border border-neutral-400 p-6">
+          <section className="mb-8">
+            <h2 className="text-2xl text-black font-normal mb-5">Price & Bills</h2>
+            <div className="border-b border-neutral-400 mb-5" />
+            <div className="space-y-2">
+              <GridRow label="Deposit" value="£1,625" evenRow />
+              <GridRow label="Bills Included" value={<i className="fa fa-check-circle text-green-600 text-lg" />} />
+              <GridRow label="Broadband" value={<a href="#" className="text-blue-600 hover:underline">View Offers</a>} evenRow />
+            </div>
+          </section>
 
-          <div className="mt-5 text-2xl text-black font-[350]">
-            Tenant Preferences
-          </div>
-          <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full sm:max-w-full">
-            <GridRow label="Student Friendly" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
-            <GridRow label="Families Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} />
-            <GridRow label="Pets Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} evenRow />
-            <GridRow label="Smokers Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} />
-            <GridRow label="DSS/LHA Covers Rent" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} evenRow />
-          </div>
+          <section className="mb-8">
+            <h2 className="text-2xl text-black font-normal mb-5">Tenant Preferences</h2>
+            <div className="border-b border-neutral-400 mb-5" />
+            <div className="space-y-2">
+              <GridRow label="Student Friendly" value={<i className="fa fa-check-circle text-green-600 text-lg" />} evenRow />
+              <GridRow label="Families Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg" />} />
+              <GridRow label="Pets Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg" />} evenRow />
+              <GridRow label="Smokers Allowed" value={<i className="fa fa-times-circle text-red-700 text-lg" />} />
+              <GridRow label="DSS/LHA Covers Rent" value={<i className="fa fa-times-circle text-red-700 text-lg" />} evenRow />
+            </div>
+          </section>
 
-          <div className="mt-5 text-2xl text-black font-[350]">
-            Availability
-          </div>
-          <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full sm:max-w-full">
-            <GridRow label="Available From" value="26 January 2024" evenRow />
-            <GridRow label="Minimum Tenancy" value="3 Months" />
-            <GridRow label="Online Viewings" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
-          </div>
+          <section className="mb-8">
+            <h2 className="text-2xl text-black font-normal mb-5">Availability</h2>
+            <div className="border-b border-neutral-400 mb-5" />
+            <div className="space-y-2">
+              <GridRow label="Available From" value="26 January 2024" evenRow />
+              <GridRow label="Minimum Tenancy" value="3 Months" />
+              <GridRow label="Online Viewings" value={<i className="fa fa-check-circle text-green-600 text-lg" />} evenRow />
+            </div>
+          </section>
 
-          <div className="mt-5 text-2xl text-black font-[350]">
-            Features
-          </div>
-          <div className="mt-5 w-full border border-solid border-neutral-400 min-h-[1px]" />
-          <div className="flex flex-col mt-5 w-full sm:max-w-full">
-            <GridRow label="Garden" value={<i className="fa fa-check-circle text-green-600 text-lg mt-1"></i>} evenRow />
-            <GridRow label="Parking" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} />
-            <GridRow label="Fireplace" value={<i className="fa fa-times-circle text-red-700 text-lg mt-1"></i>} evenRow />
-            <GridRow label="Families Allowed" value="Furnished" />
-            <GridRow label="EPC Rating" value="0" evenRow />
-          </div>
+          <section>
+            <h2 className="text-2xl text-black font-normal mb-5">Features</h2>
+            <div className="border-b border-neutral-400 mb-5" />
+            <div className="space-y-2">
+              <GridRow label="Garden" value={<i className="fa fa-check-circle text-green-600 text-lg" />} evenRow />
+              <GridRow label="Parking" value={<i className="fa fa-times-circle text-red-700 text-lg" />} />
+              <GridRow label="Fireplace" value={<i className="fa fa-times-circle text-red-700 text-lg" />} evenRow />
+              <GridRow label="Furnishing" value="Furnished" />
+              <GridRow label="EPC Rating" value="0" evenRow />
+            </div>
+          </section>
         </div>
 
-
-        <div className="flex flex-col items-center px-5 py-4 mt-8 mx-6 sm:mx-6 max-w-full text-base font-semibold text-black bg-white rounded-md border border-solid border-neutral-400 min-h-[434px] sm:w-full">
+        <div className="w-full mt-8 bg-white rounded-lg border border-neutral-400 p-6">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/a61c00a205185824e1aa89aaeef73f1a6008432edd552a06744250835b1efe03?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3"
             alt="Local Area Image"
-            className="object-contain w-full rounded-md aspect-[2.02]"
+            className="w-full rounded-lg object-cover aspect-[2.02]"
           />
-          <br />
-          <TransportGrid />
+          <div className="mt-6">
+            <TransportGrid />
+          </div>
         </div>
 
-        <button className="gap-2.5 self-center px-8 py-3 mt-14 text-xl font-bold text-white rounded-md max-md:px-5 max-md:mt-10" style={{ backgroundColor: "#498EC9" }} onClick={scrollToTop}>
+        <button
+          onClick={scrollToTop}
+          className="mx-auto mt-14 mb-8 px-8 py-3 text-xl font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-200"
+        >
           Back to top
         </button>
       </div>

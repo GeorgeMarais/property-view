@@ -14,17 +14,13 @@ const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const aboutDropdownItems: DropdownItem[] = [
-    { label: 'About OpenRent', href: '#' },
-    { label: 'Our Story', href: '#' },
-    { label: 'Contact Us', href: '#' },
-    { label: 'Careers', href: '#' },
+    { label: 'Landlords', href: '#' },
+    { label: 'Tenants', href: '#' },
+    { label: 'OpenRent', href: '#' },
   ];
 
   const pricingDropdownItems: DropdownItem[] = [
-    { label: 'Tenant Fees', href: '#' },
-    { label: 'Landlord Packages', href: '#' },
-    { label: 'Additional Services', href: '#' },
-    { label: 'Special Offers', href: '#' },
+    { label: 'Property Pricing', href: '#' },
   ];
 
   const handleDropdownClick = (dropdownName: string) => {
@@ -102,7 +98,7 @@ const Header: React.FC<HeaderProps> = () => {
         <i className={isMenuOpen ? 'fa fa-times' : 'fa fa-bars'} />
       </button>
 
-      <nav className={`flex flex-wrap gap-8 items-center self-start max-md:max-w-full ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <nav className="flex flex-wrap gap-8 items-center self-start max-md:max-w-full max-lg:hidden">
         <div className="relative">
           <button
             onClick={() => handleDropdownClick('about')}
