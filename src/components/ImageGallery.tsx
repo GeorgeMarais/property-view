@@ -23,7 +23,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover rounded-md"
         />
 
         <button
@@ -50,7 +50,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
               <img
                 src={image.src}
                 alt={`Thumbnail ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-md"
                 onClick={() => setCurrentIndex(index)}
               />
             </div>
