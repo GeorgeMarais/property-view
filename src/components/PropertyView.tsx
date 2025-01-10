@@ -132,7 +132,8 @@ const PropertyView: React.FC = () => {
 
         <button
           onClick={scrollToTop}
-          className="mx-auto mt-14 mb-8 px-8 py-3 text-xl font-bold text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors duration-200"
+          className="mx-auto mt-14 mb-8 px-8 py-3 text-xl font-bold text-white rounded-md"
+          style={{ backgroundColor: "#498EC9" }}
         >
           Back to top
         </button>
