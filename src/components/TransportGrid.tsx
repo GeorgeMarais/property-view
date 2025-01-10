@@ -28,11 +28,10 @@ const TransportGrid = () => {
                 </>
             )}
 
-            <div className="flex gap-3 items-center py-1 mt-4 cursor-pointer" onClick={toggleExpand}>
-                <div className="self-stretch my-auto text-center sm:text-left">{isExpanded ? "Hide local transport" : "Show local transport"}</div>
-                <i className={`fa ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"} object-contain shrink-0 self-stretch my-auto aspect-[1.3] w-[13px] sm:w-[16px] sm:mr-2`}></i>
+            <div className="flex gap-3 items-center justify-center py-1 mt-4 cursor-pointer text-black" onClick={toggleExpand}>
+                <div className="text-center">{isExpanded ? "Hide local transport" : "Show local transport"}</div>
+                <i className={`fa ${isExpanded ? "fa-chevron-up" : "fa-chevron-down"} text-black w-[13px] sm:w-[16px]`}></i>
             </div>
-
         </>
     );
 };
