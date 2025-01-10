@@ -43,7 +43,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         </button>
       </div>
 
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-2 max-md:hidden">
         {images.map((image, index) => (
           index !== currentIndex && (
             <div key={index} className="aspect-[4/3] overflow-hidden">

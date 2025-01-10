@@ -10,6 +10,7 @@ import image2 from "../images/image2.jpg"
 import image3 from "../images/image3.jpg"
 import image4 from "../images/image4.jpg"
 import mapImage from "../images/Location Map.png"
+import landlordImage from "../images/Ellipse 10.png"
 
 const PropertyView: React.FC = () => {
   const headerSections = [
@@ -48,7 +49,7 @@ const PropertyView: React.FC = () => {
     name: "John T.",
     responseRate: "100%",
     responseTime: "21 Hours",
-    imgSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/ebbf14df0bdea6199ad67b60ca055568421a2708cfb2d01ff5a188a3796b3f38?placeholderIfAbsent=true&apiKey=7237da01b9c1409282f3e05fd83b86f3",
+    imgSrc: landlordImage.src,
   };
 
   const scrollToTop = () => {
