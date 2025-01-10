@@ -19,12 +19,16 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
 
   return (
     <div className="w-full max-w-[760px] mx-auto">
-      <div className="relative w-full aspect-[760/562] mb-4">
+      <div className="relative w-full aspect-[760/562] mb-4 overflow-hidden">
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
           className="w-full h-full object-cover rounded-md"
         />
+
+        <div className="absolute top-5 right-[-35px] bg-[#5CB85C] text-white py-1 w-32 text-center text-sm font-medium transform rotate-45 shadow-md">
+          Available
+        </div>
 
         <button
           onClick={handlePrevious}
