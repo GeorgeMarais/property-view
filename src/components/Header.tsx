@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="relative flex flex-wrap gap-5 justify-between items-center px-5 py-6 w-full text-xl text-black bg-white border-b-[3px] border-blue-500">
       <svg viewBox="130.09 -602.975 1230.273 312.776" xmlns="http://www.w3.org/2000/svg" className="object-contain shrink-0 max-w-full aspect-[4.13] w-[207px]" role="presentation">
-        <title>OpenRent</title>
+        <title>PropFinder</title>
 
         <defs>
           <mask id="top-spin-mask" x="-0.29" y="0" width="96.33" height="59.43" maskUnits="userSpaceOnUse">
